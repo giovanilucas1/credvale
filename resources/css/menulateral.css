@@ -1,0 +1,115 @@
+/* resources/css/menulateral.css */
+
+body {
+    margin: 0;
+    display: flex;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    width: 220px; /* Largura do menu lateral */
+    height: 100vh;
+    background-color: #8B0000; /* Vermelho escuro */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: width 0.3s;
+    overflow: hidden;
+}
+
+.sidebar.collapsed {
+    width: 80px;
+}
+
+.sidebar-header {
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #600000; /* Vermelho mais escuro */
+}
+
+.sidebar-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.nav {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.nav-link {
+    color: white;
+    padding: 10px 15px;
+    width: 100%;
+    text-align: left;
+    text-decoration: none;
+    transition: background-color 0.2s, padding-left 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-link i.icon {
+    font-size: 1.2rem;
+}
+
+.nav-link:hover {
+    background-color: #B22222; /* Vermelho mais claro no hover */
+    padding-left: 25px;
+}
+
+.sidebar.collapsed .nav-link span {
+    display: none;
+}
+
+.sidebar.collapsed .nav-link {
+    justify-content: center;
+}
+
+.logout-form {
+    padding: 10px 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logout-form button {
+    width: 100%;
+    text-align: left;
+    color: white;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logout-form button:hover {
+    background-color: #fffff;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 220px; /* Alinhamento da margem da barra lateral */
+    transition: margin-left 0.3s;
+}
+
+.main-content.expanded {
+    margin-left: 80px; /* Ajuste quando o menu estiver recolhido */
+}

@@ -1,0 +1,39 @@
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.cancel-btn, .simulate-btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cancel-btn {
+    background-color: transparent;
+    color: #8B0000;
+    border: 1px solid #8B0000;
+}
+
+.cancel-btn:hover {
+    background-color: #8B0000;
+    color: white;
+}
+
+.simulate-btn {
+    background-color: #8B0000;
+    color: white;
+    border: none;
+}
+
+.simulate-btn:hover {
+    background-color: darkred;
+    transform: scale(1.05);
+}
+
+.simulate-btn:active {
+    transform: scale(0.98);
+}

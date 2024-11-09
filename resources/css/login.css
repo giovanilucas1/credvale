@@ -1,0 +1,122 @@
+/* \resources\css\login.css */
+
+body {
+    background: url('../img/fundologin.jpg') no-repeat center center fixed;
+    background-size: 100% 100%; /* Estica a imagem para cobrir toda a tela em ambas as dimensões */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Remove qualquer barra de rolagem da página */
+    caret-color: transparent; /* Remove a cor do cursor da página */
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.85); /* Fundo branco semi-transparente */
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
+    caret-color: transparent; /* Remove o cursor da caixa de login */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-logo {
+    width: 150px;
+    margin-bottom: 1.5rem;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #d32f2f;
+    border-radius: 25px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    caret-color: auto; /* Permite o cursor apenas nos campos de entrada */
+}
+
+.input-field:focus {
+    border-color: #b71c1c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 1.5rem;
+    background: linear-gradient(135deg, #d32f2f, #b71c1c);
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    caret-color: transparent; /* Remove o cursor do botão */
+}
+
+.button:hover {
+    background: linear-gradient(135deg, #b71c1c, #d32f2f);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.button:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.footer-text {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #666666;
+    caret-color: transparent; /* Remove o cursor do texto do rodapé */
+}
+
+.footer-text a {
+    color: #d32f2f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-text a:hover {
+    text-decoration: underline;
+}
+
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 2rem; /* Reduz o padding para telas pequenas */
+    }
+
+    .login-logo {
+        width: 120px; /* Ajusta o tamanho da logo em telas menores */
+    }
+
+    .input-field,
+    .button {
+        font-size: 0.9rem; /* Reduz o tamanho do texto em telas menores */
+    }
+}
